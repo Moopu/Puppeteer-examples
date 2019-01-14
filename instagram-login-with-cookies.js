@@ -12,21 +12,21 @@ const cookiesFilePath = '/test.json';
 	const page = await browser.newPage();
 	page.setViewport({height: 1080, width: 1920});
 
-	const previousSession = fs.fsync(cookiesFilePath)
-if (previousSession) {
-  // If file exist load the cookies
-  const cookiesArr = require(`.${cookiesFilePath}`)
-  if (cookiesArr.length !== 0) {
-    for (let cookie of cookiesArr) {
-      await page.setCookie(cookie)
-    }
-    console.log('Session has been loaded in the browser')
-    return true
-  }
-}
-else{
-	console.log('no prev session')
-}
+// 	const previousSession = fs.fsync(cookiesFilePath)
+// if (previousSession) {
+//   // If file exist load the cookies
+//   const cookiesArr = require(`.${cookiesFilePath}`)
+//   if (cookiesArr.length !== 0) {
+//     for (let cookie of cookiesArr) {
+//       await page.setCookie(cookie)
+//     }
+//     console.log('Session has been loaded in the browser')
+//     return true
+//   }
+// }
+// else{
+// 	console.log('no prev session')
+// }
 
   await page.goto('https://www.instagram.com/accounts/login/');
 
