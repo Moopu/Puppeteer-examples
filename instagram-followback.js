@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const edit = require('./edit')
 const fs = require('fs');
-const cookiesFilePath = '/test.json';
+Z
 
 (async () => {
 	const browser = await puppeteer.launch({

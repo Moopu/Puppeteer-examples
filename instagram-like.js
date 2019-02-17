@@ -27,13 +27,13 @@ await page.type('[name=password]', edit.password)
 	await page.waitFor(2000)
 	//click on first image
 	await page.click('#react-root > section > main > article > div.EZdmt > div > div > div:nth-child(1) > div:nth-child(1) > a > div')
-	await page.waitFor(2000)
+	await page.waitFor(5000)
 	//Start like loop with pressing next
 	for (let i = 0; i < 100; i++) {
-		await page.waitForSelector('body > div:nth-child(13) > div > div.zZYga > div > article > div.eo2As > section.ltpMr.Slqrh > span.fr66n')
-		await page.click('body > div:nth-child(13) > div > div.zZYga > div > article > div.eo2As > section.ltpMr.Slqrh > span.fr66n')
-		await page.waitFor(500)
-		await page.click('body > div:nth-child(13) > div > div.EfHg9 > div > div > a.HBoOv.coreSpriteRightPaginationArrow')
+		await page.waitForSelector('body > div._2dDPU.vCf6V > div.zZYga > div > article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button')
+		await page.click('body > div._2dDPU.vCf6V > div.zZYga > div > article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button')
+		await page.waitFor(800)
+		await page.click('body > div._2dDPU.vCf6V > div.EfHg9 > div > div > a.HBoOv.coreSpriteRightPaginationArrow')
 	console.log(i);
 	}
 	// await browser.close();
